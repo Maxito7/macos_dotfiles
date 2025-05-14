@@ -60,9 +60,24 @@
 		bottom
 		kalker
 		onefetch
+		fd
+		procs
 
 		# Typst
 		typst
+		tinymist
+
+		# Go
+		go
+		gopls
+		gofumpt
+		gotools
+
+		# Python
+		uv
+
+		# Rust
+		rustup
           ];
         };
       });

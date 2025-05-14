@@ -1,0 +1,3 @@
+command = "/Users/lucky/.nix-profile/bin/fish --login"
+mouse-hide-while-typing = true
+shell-integration = fish

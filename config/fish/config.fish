@@ -13,6 +13,9 @@ fish_add_path /sbin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 
+# Cargo path
+fish_add_path $HOME/.cargo/env.fish
+
 # Starship prompt
 starship init fish | source
 

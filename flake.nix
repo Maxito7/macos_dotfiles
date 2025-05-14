@@ -79,6 +79,16 @@
 
 		# Rust
 		rustup
+
+		# Webdev
+		nodejs_24
+		typescript
+		xh
+		biome
+
+		# Virtualization & VMs
+		docker
+		docker-compose
           ];
         };
       });

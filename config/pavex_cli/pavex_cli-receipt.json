@@ -1,0 +1,1 @@
+{"binaries":["pavex"],"binary_aliases":{},"cdylibs":[],"cstaticlibs":[],"install_layout":"cargo-home","install_prefix":"/Users/lucky/.cargo","modify_path":true,"provider":{"source":"cargo-dist","version":"0.28.0"},"source":{"app_name":"pavex_cli","name":"pavex","owner":"LukeMathWalker","release_type":"github"},"version":"0.1.80"}

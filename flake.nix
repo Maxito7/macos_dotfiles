@@ -62,6 +62,7 @@
 		onefetch
 		fd
 		procs
+		rip2
 
 		# Typst
 		typst

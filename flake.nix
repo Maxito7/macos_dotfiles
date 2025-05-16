@@ -77,6 +77,7 @@
 
 		# Python
 		uv
+		ruff
 
 		# Rust
 		rustup
@@ -98,7 +99,7 @@
 		lua
 
 		# Ruby
-		#ruby
+		ruby_3_4
           ];
         };
       });

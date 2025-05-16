@@ -94,12 +94,14 @@
 
 		# Zig
 		zig
+		zls
+		zigimports
 
 		# Lua
 		lua
 
 		# Ruby
-		ruby_3_4
+		#ruby_3_4
           ];
         };
       });

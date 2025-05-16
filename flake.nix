@@ -98,7 +98,7 @@
 		lua
 
 		# Ruby
-		ruby
+		#ruby
           ];
         };
       });

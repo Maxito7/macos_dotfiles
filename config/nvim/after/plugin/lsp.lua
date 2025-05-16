@@ -32,6 +32,8 @@ local util = require("lspconfig/util")
 
 require("neodev").setup()
 
+require("lspconfig").clangd.setup({})
+
 require("lspconfig").gopls.setup({
 	on_attach = on_attach,
 	capabilities = {
@@ -54,4 +56,33 @@ require("lspconfig").gopls.setup({
 			},
 		},
 	},
+})
+
+require("lspconfig").zls.setup({})
+
+vim.filetype.add({ extension = { typ = "typst" } })
+require("lspconfig").tinymist.setup({
+	capabilities = capabilities,
+	single_file_support = true,
+	root_dir = function(filename, bufnr)
+		return vim.fn.getcwd()
+	end,
+	-- pin the main file
+	--	vim.lsp.buf.execute_command({ command = "tinymist.pinMain", arguments = { vim.api.nvim_buf_get_name(0) } }),
+	-- unpin the main file
+	--vim.lsp.buf.execute_command({ command = "tinymist.pinMain", arguments = { nil } }),
+	settings = {
+		exportPdf = "onSave",
+		systemFonts = true,
+		--formatterMode = "typstyle",
+	},
+})
+
+lsp.handlers["textdocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
+	border = "rounded",
+})
+
+-- bordered lsp diagnostics
+vim.diagnostic.config({
+	float = { border = "rounded" },
 })

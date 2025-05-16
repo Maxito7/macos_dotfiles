@@ -14,7 +14,7 @@ require("conform").setup({
 		javascript = { "biome" },
 		ruby = { "rubocop" },
 		typescript = { "biome" },
-		zig = { "zig fmt" },
+		zig = { "zig fmt", "zigimports" },
 		--haskell = { "fourmolu" },
 	},
 	format_on_save = {

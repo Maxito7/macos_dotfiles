@@ -20,3 +20,20 @@ fish_add_path $HOME/.cargo/env.fish
 starship init fish | source
 
 zoxide init fish | source
+
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
+
+set -x ZELLIJ_AUTO_EXIT true
+set -x ZELLIJ_AUTO_ATTACH true
+
+if status is-interactive
+    eval (zellij setup --generate-auto-start fish | string collect)
+end

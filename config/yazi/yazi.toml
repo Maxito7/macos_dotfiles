@@ -1,0 +1,13 @@
+# yazi.toml
+[manager]
+show_hidden = true
+show_symlink = true
+
+[opener]
+edit = [{ run = 'nvim "$@"', block = true }]
+
+[icon]
+rules = [
+{name = "*.go", text = "󰟓", fg = "#7dcfff"},
+{name = "*.vue", text = "", fg = "#82ffb8"},
+]

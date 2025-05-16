@@ -73,7 +73,7 @@
 		go
 		gopls
 		gofumpt
-		gotools
+		(lib.hiPrio gotools)
 
 		# Python
 		uv
@@ -101,7 +101,7 @@
 		lua
 
 		# Ruby
-		#ruby_3_4
+		ruby
           ];
         };
       });

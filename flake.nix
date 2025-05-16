@@ -63,6 +63,7 @@
 		fd
 		procs
 		rip2
+		fzf
 
 		# Typst
 		typst
@@ -89,6 +90,15 @@
 		# Virtualization & VMs
 		docker
 		docker-compose
+
+		# Zig
+		zig
+
+		# Lua
+		lua
+
+		# Ruby
+		ruby
           ];
         };
       });

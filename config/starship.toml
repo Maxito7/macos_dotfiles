@@ -1,0 +1,52 @@
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+fish_style_pwd_dir_length = 3
+
+[golang]
+disabled = false
+symbol = "󰟓"
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#7dcfff"
+
+[rust]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#ff9e64"
+
+[python]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#6fdc8c"
+
+[c]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#5e99ff"
+
+[cpp]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#5e99ff"
+
+[nodejs]
+disabled = false
+symbol = "󰎙"
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#6fdc8c"
+
+[typst]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#6fdcbb"
+
+[lua]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#4d5beb"

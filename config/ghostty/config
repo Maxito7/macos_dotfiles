@@ -1,6 +1,6 @@
 command = "/Users/lucky/.nix-profile/bin/fish --login"
 mouse-hide-while-typing = true
-shell-integration = fish
+#shell-integration = fish
 foreground = c0caf5
 background = 212436
 cursor-style = block

@@ -50,3 +50,9 @@ disabled = false
 symbol = ""
 format = 'via [${symbol} ${version} ]($style)'
 style = "bold fg:#4d5beb"
+
+[ruby]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${version} ]($style)'
+style = "bold fg:#f7768e"

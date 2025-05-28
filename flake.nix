@@ -78,7 +78,7 @@
 		# Python
 		uv
 		ruff
-		ty
+		#ty
 
 		# Rust
 		rustup

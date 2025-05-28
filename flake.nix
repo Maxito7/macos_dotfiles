@@ -78,16 +78,18 @@
 		# Python
 		uv
 		ruff
-		#ty
+		ty
 
 		# Rust
 		rustup
+		bacon
 
 		# Webdev
 		nodejs_24
 		typescript
 		xh
 		biome
+		vue-language-server
 
 		# Virtualization & VMs
 		docker

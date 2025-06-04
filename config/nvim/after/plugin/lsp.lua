@@ -104,3 +104,13 @@ require("lspconfig").tinymist.setup({
 		--formatterMode = "typstyle",
 	},
 })
+
+-- lspconfig.ts_ls.setup {} 
+require("lspconfig").volar.setup {
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+  init_options = {
+    vue = {
+      hybridMode = false,
+    },
+  },
+}

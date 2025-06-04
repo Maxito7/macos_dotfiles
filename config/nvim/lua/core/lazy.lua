@@ -336,4 +336,8 @@ require("lazy").setup({
 		ft = "typst",
 		lazy = false,
 	},
+	-- Gitsigns
+	{
+		"lewis6991/gitsigns.nvim",
+	},
 })

@@ -30,6 +30,7 @@ function y
 	rm -f -- "$tmp"
 end
 
+alias ls="eza -lah --icons"
 
 set -x ZELLIJ_AUTO_EXIT true
 set -x ZELLIJ_AUTO_ATTACH true

@@ -56,3 +56,9 @@ disabled = false
 symbol = ""
 format = 'via [${symbol} ${version} ]($style)'
 style = "bold fg:#f7768e"
+
+[docker_context]
+disabled = false
+symbol = ""
+format = 'via [${symbol} ${context} ]($style)'
+style = "bold fg:#7dcfff"

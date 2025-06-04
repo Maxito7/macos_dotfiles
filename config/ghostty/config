@@ -36,3 +36,9 @@ palette = 14=#7dcfff
 # white
 palette = 7=#c0caf5
 palette = 15=#c0caf5
+
+# MacOS icon options
+macos-icon = custom-style
+macos-icon-frame = chrome
+macos-icon-ghost-color=62d196
+macos-icon-screen-color=414868

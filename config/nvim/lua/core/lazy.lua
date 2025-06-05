@@ -17,154 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
-require("lazy").setup({
-	-- Devicons
-	{
-		"nvim-tree/nvim-web-devicons",
-		opts = {
-			override_by_extension = {
-				lua = {
-					icon = "󰢱",
-					color = "#4d5beb",
-					--color = "#003ab8",
-					name = "Lua",
-				},
-				rs = {
-					icon = "",
-					color = "#ff9e64",
-					--color = "#ff832b",
-					name = "Rust",
-				},
-				rb = {
-					icon = "",
-					color = "#f7768e",
-					name = "Ruby",
-				},
-				py = {
-					icon = "",
-					color = "#6fdc8c",
-					name = "Python",
-				},
-				go = {
-					icon = "",
-					color = "#7dcfff",
-					name = "Go",
-				},
-				["go.mod"] = {
-					icon = "",
-					color = "#6fdc8c",
-					name = "GoMod",
-				},
-				["go.sum"] = {
-					icon = "",
-					color = "#f7768c",
-					name = "GoSum",
-				},
-				cpp = {
-					icon = "",
-					color = "#5e99ff",
-					name = "CPP",
-				},
-				c = {
-					icon = "",
-					color = "#BB9AF7",
-					--color = "#6929c4",
-					name = "C",
-				},
-				tex = {
-					icon = "",
-					color = "#c0caf5",
-					name = "LaTeX",
-				},
-				md = {
-					icon = "󰽛",
-					color = "#c0caf5",
-					name = "Markdown",
-				},
-				vim = {
-					icon = "",
-					color = "#6fdc8c",
-					name = "Vim",
-				},
-				vue = {
-					icon = "",
-					color = "#62d196", --#289c5e
-					name = "Vue",
-				},
-				nix = {
-					icon = "",
-					color = "#33b1ff",
-					name = "Nix",
-				},
-				ts = {
-					icon = "",
-					color = "#6bb8ff", --5e99ff
-					name = "Typescript",
-				},
-				js = {
-					icon = "",
-					color = "#ffd12b",
-					name = "Javascript",
-				},
-				["tsx"] = {
-					icon = "󰜈",
-					color = "#6fb8fc",
-					name = "Tsx",
-				},
-				["norg"] = {
-					icon = "",
-					color = "#3692d5",
-					name = "Neorg",
-				},
-				["nuxt.config.ts"] = {
-					icon = "󱄆",
-					color = "#289c5e",
-					name = "Nuxt",
-				},
-				["Cargo.toml"] = {
-					icon = "",
-					color = "#ff9e64",
-					name = "Cargo.toml",
-				},
-				["gleam"] = {
-					icon = "",
-					color = "#ff96f3",
-					name = "Gleam",
-				},
-				["typ"] = {
-					icon = "",
-					color = "#6fdcbb",
-					name = "Typst",
-				},
-				["slint"] = {
-					icon = "󱐌",
-					color = "#5e99ff",
-					name = "Slint",
-				},
-			},
-		},
-	},
-	-- Tokyonight
-	{
-		"folke/tokyonight.nvim",
-		opts = {
-			style = "night",
-			transparent = true,
-			on_colors = function(colors)
-				colors.green = "#62d196"
-				colors.comment = "#86a1db"
-				colors.gitSigns = {
-					add = "#62d196",
-					change = "#7dcfff",
-					delete = "#f7768e",
-				}
-			end,
-			styles = {
-				floats = "transparent",
-				sidebars = "transparent",
-			},
-		},
-	},
+require("lazy").setup({	
 	-- Barbecue + dependencies
 	{
 		"utilyre/barbecue.nvim",
@@ -339,5 +192,153 @@ require("lazy").setup({
 	-- Gitsigns
 	{
 		"lewis6991/gitsigns.nvim",
+		opts = {},
+	},
+	-- Tokyonight
+	{
+		"folke/tokyonight.nvim",
+		opts = {
+			style = "night",
+			transparent = true,
+			on_colors = function(colors)
+				colors.green = "#62d196"
+				colors.comment = "#86a1db"
+				colors.gitSigns = {
+					add = "#62d196",
+					change = "#7dcfff",
+					delete = "#f7768e",
+				}
+			end,
+			styles = {
+				floats = "transparent",
+				sidebars = "transparent",
+			},
+		},
+	},
+	-- Devicons
+	{
+		"nvim-tree/nvim-web-devicons",
+		opts = {
+			override_by_extension = {
+				lua = {
+					icon = "󰢱",
+					color = "#4d5beb",
+					--color = "#003ab8",
+					name = "Lua",
+				},
+				rs = {
+					icon = "",
+					color = "#ff9e64",
+					--color = "#ff832b",
+					name = "Rust",
+				},
+				rb = {
+					icon = "",
+					color = "#f7768e",
+					name = "Ruby",
+				},
+				py = {
+					icon = "",
+					color = "#6fdc8c",
+					name = "Python",
+				},
+				go = {
+					icon = "",
+					color = "#7dcfff",
+					name = "Go",
+				},
+				["go.mod"] = {
+					icon = "",
+					color = "#6fdc8c",
+					name = "GoMod",
+				},
+				["go.sum"] = {
+					icon = "",
+					color = "#f7768c",
+					name = "GoSum",
+				},
+				cpp = {
+					icon = "",
+					color = "#5e99ff",
+					name = "CPP",
+				},
+				c = {
+					icon = "",
+					color = "#BB9AF7",
+					--color = "#6929c4",
+					name = "C",
+				},
+				tex = {
+					icon = "",
+					color = "#c0caf5",
+					name = "LaTeX",
+				},
+				md = {
+					icon = "󰽛",
+					color = "#c0caf5",
+					name = "Markdown",
+				},
+				vim = {
+					icon = "",
+					color = "#6fdc8c",
+					name = "Vim",
+				},
+				vue = {
+					icon = "",
+					color = "#62d196", --#289c5e
+					name = "Vue",
+				},
+				nix = {
+					icon = "",
+					color = "#33b1ff",
+					name = "Nix",
+				},
+				ts = {
+					icon = "",
+					color = "#6bb8ff", --5e99ff
+					name = "Typescript",
+				},
+				js = {
+					icon = "",
+					color = "#ffd12b",
+					name = "Javascript",
+				},
+				["tsx"] = {
+					icon = "󰜈",
+					color = "#6fb8fc",
+					name = "Tsx",
+				},
+				["norg"] = {
+					icon = "",
+					color = "#3692d5",
+					name = "Neorg",
+				},
+				["nuxt.config.ts"] = {
+					icon = "󱄆",
+					color = "#289c5e",
+					name = "Nuxt",
+				},
+				["Cargo.toml"] = {
+					icon = "",
+					color = "#ff9e64",
+					name = "Cargo.toml",
+				},
+				["gleam"] = {
+					icon = "",
+					color = "#ff96f3",
+					name = "Gleam",
+				},
+				["typ"] = {
+					icon = "",
+					color = "#6fdcbb",
+					name = "Typst",
+				},
+				["slint"] = {
+					icon = "󱐌",
+					color = "#5e99ff",
+					name = "Slint",
+				},
+			},
+		},
 	},
 })

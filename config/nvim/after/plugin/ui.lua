@@ -1,5 +1,3 @@
-vim.cmd("colorscheme tokyonight")
-
 local lualine = require("lualine")
 
 lualine.setup({

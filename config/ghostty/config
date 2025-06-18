@@ -7,7 +7,7 @@ cursor-style = block
 
 # Fonts
 #font-family = JetBrainsMono Nerd Font
-font-family = Lilex Nerd Font
+font-family = Lilex Nerd Font Medium
 font-size = 16
 
 # Colors can be changed by setting the 16 colors of `palette` which each color

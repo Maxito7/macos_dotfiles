@@ -99,6 +99,7 @@
 		zig
 		zls
 		zigimports
+		zig-zlint
 
 		# Lua
 		lua

@@ -106,6 +106,11 @@
 
 		# Ruby
 		ruby
+
+		# Database
+		postgresql
+		sqlite
+		sqld
           ];
         };
       });

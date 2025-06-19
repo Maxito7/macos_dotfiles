@@ -120,7 +120,7 @@ require("lspconfig").ty.setup({
     settings = {
       -- ty language server settings go here
 			cmd = { "ty", "server" },
-			filetypes = { "python" },
+			filetypes = { "python", "py" },
 			root_dir = vim.fs.root(0, { ".git/", "pyproject.toml" }),
     }
   }

@@ -39,6 +39,7 @@
           paths = with pkgs; [
 	  	# TUI/CLI goodies
 		neovim
+		jujutsu
 		git
 		gh
 		gh-dash

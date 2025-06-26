@@ -65,6 +65,7 @@
 		procs
 		rip2
 		fzf
+		difftastic
 
 		# Typst
 		typst

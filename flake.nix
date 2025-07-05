@@ -105,9 +105,11 @@
 
 		# Lua
 		lua
+		stylua
 
 		# Ruby
 		ruby
+		rubocop
 
 		# Database
 		postgresql

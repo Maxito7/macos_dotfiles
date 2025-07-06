@@ -110,7 +110,7 @@
 		# Ruby
 		ruby
 		rubocop
-		bundler
+		#bundler
 		ruby-lsp
 
 		# Database

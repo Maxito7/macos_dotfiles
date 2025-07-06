@@ -110,6 +110,8 @@
 		# Ruby
 		ruby
 		rubocop
+		bundler
+		ruby-lsp
 
 		# Database
 		postgresql

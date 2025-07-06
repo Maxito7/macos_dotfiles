@@ -60,24 +60,6 @@ require("lspconfig").gopls.setup({
 
 require("lspconfig").zls.setup({})
 
-vim.filetype.add({ extension = { typ = "typst" } })
-require("lspconfig").tinymist.setup({
-	capabilities = capabilities,
-	single_file_support = true,
-	root_dir = function(filename, bufnr)
-		return vim.fn.getcwd()
-	end,
-	-- pin the main file
-	--	vim.lsp.buf.execute_command({ command = "tinymist.pinMain", arguments = { vim.api.nvim_buf_get_name(0) } }),
-	-- unpin the main file
-	--vim.lsp.buf.execute_command({ command = "tinymist.pinMain", arguments = { nil } }),
-	settings = {
-		exportPdf = "onSave",
-		systemFonts = true,
-		--formatterMode = "typstyle",
-	},
-})
-
 lsp.handlers["textdocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
 	border = "rounded",
 })
@@ -105,23 +87,23 @@ require("lspconfig").tinymist.setup({
 	},
 })
 
--- lspconfig.ts_ls.setup {} 
-require("lspconfig").volar.setup {
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-  init_options = {
-    vue = {
-      hybridMode = false,
-    },
-  },
-}
+-- lspconfig.ts_ls.setup {}
+require("lspconfig").volar.setup({
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+	init_options = {
+		vue = {
+			hybridMode = false,
+		},
+	},
+})
 
 require("lspconfig").ty.setup({
 	init_options = {
-    settings = {
-      -- ty language server settings go here
+		settings = {
+			-- ty language server settings go here
 			cmd = { "ty", "server" },
 			filetypes = { "python", "py" },
 			root_dir = vim.fs.root(0, { ".git/", "pyproject.toml" }),
-    }
-  }
+		},
+	},
 })

@@ -1,11 +1,6 @@
-local lualine = require("lualine")
+local gitsigns = require("gitsigns")
 
-lualine.setup({
-	opt = true,
-	options = {
-		icons_enabled = true,
-	},
-})
+gitsigns.setup({})
 
 -- Oil
 local oil = require("oil")

@@ -117,6 +117,9 @@
 		postgresql
 		sqlite
 		sqld
+
+		# Extra
+		protobuf
           ];
         };
       });

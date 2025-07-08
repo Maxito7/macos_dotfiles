@@ -1,7 +1,9 @@
+command_timeout = 1000
+
 [directory]
 truncation_length = 4
 truncate_to_repo = true
-fish_style_pwd_dir_length = 3
+#fish_style_pwd_dir_length = 3
 
 [golang]
 disabled = false

@@ -97,6 +97,7 @@ require("lspconfig").volar.setup({
 	},
 })
 
+--[[
 require("lspconfig").ty.setup({
 	init_options = {
 		settings = {
@@ -106,4 +107,9 @@ require("lspconfig").ty.setup({
 			root_dir = vim.fs.root(0, { ".git/", "pyproject.toml" }),
 		},
 	},
+})
+]]
+
+require("lspconfig").ruby_lsp.setup({
+	capabilities = capabilities,
 })

@@ -127,6 +127,7 @@
 		nixpkgs-fmt
 		nixpkgs-lint
 		nixpkgs-vet
+		direnv
           ];
         };
       });

@@ -10,7 +10,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "ruff_isort", "ruff_format" },
 		go = { "gofumpt", "goimports" },
-		--nix = { "alejandra", "nixpkgs_fmt" },
+		nix = { "alejandra", "nixpkgs_fmt" },
 		javascript = { "biome" },
 		typescript = { "biome" },
 		--ruby = { "rubocop" },

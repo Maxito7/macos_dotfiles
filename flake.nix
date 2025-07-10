@@ -120,6 +120,13 @@
 
 		# Extra
 		protobuf
+
+		# Nix
+		devenv
+		alejandra
+		nixpkgs-fmt
+		nixpkgs-lint
+		nixpkgs-vet
           ];
         };
       });

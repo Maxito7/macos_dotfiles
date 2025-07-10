@@ -334,4 +334,22 @@ require("lazy").setup({
 			},
 		},
 	},
+	-- ruby.lsp
+	{
+		"adam12/ruby-lsp.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"neovim/nvim-lspconfig",
+		},
+		config = true,
+		opts = {
+			auto_install = false,
+			lspconfig = {
+				init_options = {
+					formatter = "standard",
+					linters = { "standard" },
+				},
+			},
+		},
+	},
 })

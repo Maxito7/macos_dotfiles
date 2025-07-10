@@ -109,7 +109,8 @@ require("lspconfig").ty.setup({
 	},
 })
 ]]
-
+--[[
 require("lspconfig").ruby_lsp.setup({
 	capabilities = capabilities,
 })
+]]

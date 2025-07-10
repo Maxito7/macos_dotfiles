@@ -13,7 +13,7 @@ require("conform").setup({
 		--nix = { "alejandra", "nixpkgs_fmt" },
 		javascript = { "biome" },
 		typescript = { "biome" },
-		ruby = { "rubocop" },
+		--ruby = { "rubocop" },
 		typescript = { "biome" },
 		zig = { "zig fmt", "zigimports" },
 		--haskell = { "fourmolu" },

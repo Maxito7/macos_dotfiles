@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2023 Jade Lovelace
 #
 # SPDX-License-Identifier: CC0-1.0
-
 {
   description = "Basic usage of flakey-profile";
 
@@ -11,124 +10,133 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils, flakey-profile }:
+  outputs =
+    { self
+    , nixpkgs
+    , flake-utils
+    , flakey-profile
+    ,
+    }:
     flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      in
-      {
-        # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
-        #
-        # Usage:
-        # Switch to this flake:
-        #   nix run .#profile.switch
-        # Revert a profile change (note: does not revert pins):
-        #   nix run .#profile.rollback
-        # Build, without switching:
-        #   nix build .#profile
-        # Pin nixpkgs in the flake registry and in NIX_PATH, so that
-        # `nix run nixpkgs#hello` and `nix-shell -p hello --run hello` will
-        # resolve to the same hello as below [should probably be run as root, see README caveats]:
-        #   sudo nix run .#profile.pin
-        packages.profile = flakey-profile.lib.mkProfile {
-          inherit pkgs;
-          # Specifies things to pin in the flake registry and in NIX_PATH.
-          pinned = { nixpkgs = toString nixpkgs; };
-          paths = with pkgs; [
-	  	# TUI/CLI goodies
-		neovim
-		jujutsu
-		git
-		gh
-		gh-dash
-		fish
-		zellij
-		yazi
-		lazygit
-		eza
-		zoxide
-		starship
-		bat
-		vhs
-		charm-freeze
-		pop
-		ripgrep
-		ripgrep-all
-		tokei
-		macchina
-		bottom
-		kalker
-		onefetch
-		fd
-		procs
-		rip2
-		fzf
-		difftastic
+    let
+      pkgs = import nixpkgs {
+        inherit system;
+      };
+    in
+    {
+      # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
+      #
+      # Usage:
+      # Switch to this flake:
+      #   nix run .#profile.switch
+      # Revert a profile change (note: does not revert pins):
+      #   nix run .#profile.rollback
+      # Build, without switching:
+      #   nix build .#profile
+      # Pin nixpkgs in the flake registry and in NIX_PATH, so that
+      # `nix run nixpkgs#hello` and `nix-shell -p hello --run hello` will
+      # resolve to the same hello as below [should probably be run as root, see README caveats]:
+      #   sudo nix run .#profile.pin
+      packages.profile = flakey-profile.lib.mkProfile {
+        inherit pkgs;
+        # Specifies things to pin in the flake registry and in NIX_PATH.
+        pinned = { nixpkgs = toString nixpkgs; };
+        paths = with pkgs; [
+          # TUI/CLI goodies
+          neovim
+          jujutsu
+          git
+          gh
+          gh-dash
+          fish
+          zellij
+          yazi
+          lazygit
+          eza
+          zoxide
+          starship
+          bat
+          vhs
+          charm-freeze
+          pop
+          ripgrep
+          ripgrep-all
+          tokei
+          macchina
+          bottom
+          kalker
+          onefetch
+          fd
+          procs
+          rip2
+          fzf
+          difftastic
 
-		# Typst
-		typst
-		tinymist
+          # Typst
+          typst
+          tinymist
 
-		# Go
-		go
-		gopls
-		gofumpt
-		(lib.hiPrio gotools)
+          # Go
+          go
+          gopls
+          gofumpt
+          (lib.hiPrio gotools)
 
-		# Python
-		uv
-		ruff
-		ty
+          # Python
+          uv
+          ruff
+          ty
 
-		# Rust
-		rustup
-		bacon
+          # Rust
+          rustup
+          bacon
 
-		# Webdev
-		nodejs_24
-		typescript
-		xh
-		biome
-		vue-language-server
+          # Webdev
+          nodejs_24
+          typescript
+          xh
+          biome
+          vue-language-server
 
-		# Virtualization & VMs
-		docker
-		docker-compose
+          # Virtualization & VMs
+          docker
+          docker-compose
 
-		# Zig
-		zig
-		zls
-		zigimports
-		zig-zlint
+          # Zig
+          zig
+          zls
+          zigimports
+          zig-zlint
 
-		# Lua
-		lua
-		stylua
+          # Lua
+          lua
+          stylua
 
-		# Ruby
-		ruby
-		rubocop
-		#bundler
-		ruby-lsp
+          # Ruby
+          ruby
+          rubocop
+          #bundler
+          ruby-lsp
 
-		# Database
-		postgresql
-		sqlite
-		sqld
+          # Database
+          postgresql
+          sqlite
+          sqld
 
-		# Extra
-		protobuf
+          # Extra
+          protobuf
 
-		# Nix
-		devenv
-		alejandra
-		nixpkgs-fmt
-		nixpkgs-lint
-		nixpkgs-vet
-		direnv
-          ];
-        };
-      });
+          # Nix
+          devenv
+          alejandra
+          nixpkgs-fmt
+          nixpkgs-lint
+          nixpkgs-vet
+          direnv
+
+          # Cloudflare
+          wrangler
+        ];
+      };
+    });
 }

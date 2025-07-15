@@ -133,9 +133,6 @@
           nixpkgs-lint
           nixpkgs-vet
           direnv
-
-          # Cloudflare
-          wrangler
         ];
       };
     });

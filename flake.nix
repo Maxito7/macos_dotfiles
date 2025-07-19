@@ -122,6 +122,8 @@
           postgresql
           sqlite
           sqld
+          surrealdb
+          surrealist
 
           # Extra
           protobuf

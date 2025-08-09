@@ -71,6 +71,7 @@
           rip2
           fzf
           difftastic
+          atuin
 
           # Typst
           typst
@@ -106,7 +107,7 @@
           zig
           zls
           zigimports
-          zig-zlint
+          #zig-zlint
 
           # Lua
           lua

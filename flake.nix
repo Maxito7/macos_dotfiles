@@ -48,6 +48,7 @@
         paths = with pkgs; [
           # System
           cmake
+          pkg-config
 
           # TUI/CLI goodies
           neovim

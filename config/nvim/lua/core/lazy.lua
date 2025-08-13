@@ -181,12 +181,6 @@ require("lazy").setup({
 		ft = "typst",
 		lazy = false,
 	},
-	-- Gitsigns
-	{
-		"lewis6991/gitsigns.nvim",
-		lazy = false,
-		opts = {},
-	},
 	-- Tokyonight
 	{
 		"folke/tokyonight.nvim",
@@ -207,6 +201,12 @@ require("lazy").setup({
 				sidebars = "transparent",
 			},
 		},
+	},
+	-- Gitsigns
+	{
+		"lewis6991/gitsigns.nvim",
+		lazy = false,
+		opts = {},
 	},
 	-- Devicons
 	{

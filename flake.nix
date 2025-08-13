@@ -8,6 +8,9 @@
     flakey-profile.url = "github:lf-/flakey-profile";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    zjstatus = {
+      url = "github:dj95/zjstatus";
+    };
   };
 
   outputs =
@@ -15,6 +18,7 @@
     , nixpkgs
     , flake-utils
     , flakey-profile
+    , zjstatus
     ,
     }:
     flake-utils.lib.eachDefaultSystem (system:
@@ -42,6 +46,9 @@
         # Specifies things to pin in the flake registry and in NIX_PATH.
         pinned = { nixpkgs = toString nixpkgs; };
         paths = with pkgs; [
+          # System
+          cmake
+
           # TUI/CLI goodies
           neovim
           jujutsu
@@ -50,6 +57,7 @@
           gh-dash
           fish
           zellij
+          zjstatus
           yazi
           lazygit
           eza

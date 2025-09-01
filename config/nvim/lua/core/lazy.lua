@@ -76,12 +76,27 @@ require("lazy").setup({
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
+		dependencies = { "OXY2DEV/markview.nvim" },
+		lazy = false,
 		build = ":TSUpdate",
 		cmd = { "TSInstall", "TSUpdate" },
 		event = { "BufRead", "BufNewFile" },
 		build = function()
 			vim.cmd("TSUpdate")
 		end,
+	},
+	{
+		"OXY2DEV/markview.nvim",
+		lazy = false,
+
+		-- For `nvim-treesitter` users.
+		priority = 49,
+
+		-- For blink.cmp's completion
+		-- source
+		-- dependencies = {
+		--     "saghen/blink.cmp"
+		-- },
 	},
 	-- No-neck-pain
 	"shortcuts/no-neck-pain.nvim",

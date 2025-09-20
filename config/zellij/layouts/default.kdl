@@ -17,13 +17,13 @@ layout {
 
                 hide_frame_for_single_pane "false"
 
-                mode_normal  "#[bg=blue,fg=#212436]  NORMAL "
-								mode_locked "#[bg=red,fg=#212436]  LOCKED "
-								mode_pane  "#[bg=green,fg=#212436]  PANE "
-								mode_tab  "#[bg=#be95ff,fg=#212436] 󰓩 TAB "
-								mode_session "#[bg=#ff9e64,fg=#212436] 󰌢 SESSION "
-								mode_scroll "#[bg=#ff9e64,fg=#212436]  SCROLL "
-                mode_tmux    "#[bg=#ffc387,fg=#212436]  TMUX "
+                mode_normal  "#[bg=blue,fg=#212436,bold]  NORMAL "
+								mode_locked "#[bg=red,fg=#212436,bold]  LOCKED "
+								mode_pane  "#[bg=green,fg=#212436,bold]  PANE "
+								mode_tab  "#[bg=#be95ff,fg=#212436,bold] 󰓩 TAB "
+								mode_session "#[bg=#ff9e64,fg=#212436,bold] 󰌢 SESSION "
+								mode_scroll "#[bg=#ff9e64,fg=#212436,bold]  SCROLL "
+                mode_tmux    "#[bg=#ffc387,fg=#212436,bold]  TMUX "
 
                 tab_normal   "#[fg=#6C7086] {name} "
                 tab_active   "#[fg=#c0caf5,bold] {name} "

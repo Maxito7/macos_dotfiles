@@ -88,6 +88,7 @@ require("lspconfig").tinymist.setup({
 })
 
 -- lspconfig.ts_ls.setup {}
+--[[
 require("lspconfig").volar.setup({
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 	init_options = {
@@ -96,6 +97,7 @@ require("lspconfig").volar.setup({
 		},
 	},
 })
+]]
 
 --[[
 require("lspconfig").ty.setup({

@@ -107,6 +107,7 @@
           xh
           biome
           vue-language-server
+          pnpm
 
           # Virtualization & VMs
           docker

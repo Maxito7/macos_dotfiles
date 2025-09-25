@@ -81,6 +81,7 @@
           fzf
           difftastic
           atuin
+          ast-grep
 
           # Typst
           typst

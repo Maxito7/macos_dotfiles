@@ -99,7 +99,7 @@ require("lazy").setup({
 		-- },
 	},
 	-- No-neck-pain
-	"shortcuts/no-neck-pain.nvim",
+	{ "shortcuts/no-neck-pain.nvim", version = "*" },
 	-- Conform
 	{
 		"stevearc/conform.nvim",
@@ -367,4 +367,5 @@ require("lazy").setup({
 			},
 		},
 	},
+	-- no-neck-pain
 })

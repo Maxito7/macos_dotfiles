@@ -82,6 +82,7 @@
           difftastic
           atuin
           ast-grep
+          dotenv-cli
 
           # Typst
           typst

@@ -25,6 +25,8 @@ palette = 9=#f7768e
 # green
 palette = 2=#62d196
 palette = 10=#62d196
+#palette = 2=#47e054
+#palette = 10=#47e054
 # yellow
 palette = 3=#e0af68
 palette = 11=#e0af68

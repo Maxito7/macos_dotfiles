@@ -102,18 +102,18 @@ require("lspconfig").volar.setup({
 })
 ]]
 
---[[
 require("lspconfig").ty.setup({
-	init_options = {
-		settings = {
-			-- ty language server settings go here
+	settings = {
+		-- ty language server settings go here
+		ty = {
 			cmd = { "ty", "server" },
 			filetypes = { "python", "py" },
 			root_dir = vim.fs.root(0, { ".git/", "pyproject.toml" }),
 		},
 	},
 })
-]]
+vim.lsp.enable("ty")
+
 --[[
 require("lspconfig").ruby_lsp.setup({
 	capabilities = capabilities,
